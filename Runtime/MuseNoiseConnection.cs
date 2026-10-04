@@ -1,4 +1,4 @@
-// Adapted from wong2/muse-client and Meta Muse Gadget SDK; see NOTICE.txt.
+// Adapted from wong2/muse-client and Meta Muse Gadget SDK; see NOTICE.
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -98,7 +98,7 @@ namespace Muse.Unity
             try
             {
                 connection.socket.Options.SetRequestHeader("Authorization", "Bearer " + token);
-                connection.socket.Options.SetRequestHeader("User-Agent", "muse-unity/0.1.0-preview.1");
+                connection.socket.Options.SetRequestHeader("User-Agent", "muse-unity/0.1.0-preview.2");
                 // ClientWebSocket manages WebSocket keepalives; no application data is fabricated.
                 connection.socket.Options.KeepAliveInterval = TimeSpan.FromSeconds(20);
                 using var timeout = CancellationTokenSource.CreateLinkedTokenSource(cancellation);

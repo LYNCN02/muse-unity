@@ -171,13 +171,13 @@ namespace Muse.Unity
             private sealed class Listener : AndroidJavaProxy
             {
                 private readonly Action<string, string> callback;
-                public Listener(Action<string, string> callback) : base("io.github.openxiaoshan.muse.MuseBlePeripheral$Listener") { this.callback = callback; }
+                public Listener(Action<string, string> callback) : base("io.github.lyncn02.muse.MuseBlePeripheral$Listener") { this.callback = callback; }
                 [UnityEngine.Scripting.Preserve] public void onEvent(string kind, string value) => callback(kind, value);
             }
             public void Start(string name, Action<string, string> onEvent)
             {
                 using var unity = new AndroidJavaClass("com.unity3d.player.UnityPlayer"); using var activity = unity.GetStatic<AndroidJavaObject>("currentActivity");
-                listener = new Listener(onEvent); native = new AndroidJavaObject("io.github.openxiaoshan.muse.MuseBlePeripheral", activity, listener); native.Call("start", name);
+                listener = new Listener(onEvent); native = new AndroidJavaObject("io.github.lyncn02.muse.MuseBlePeripheral", activity, listener); native.Call("start", name);
             }
             public void Send(byte[] packet) => native.Call("send", Convert.ToBase64String(packet));
             public void Complete() => native.Call("complete");

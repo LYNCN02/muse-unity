@@ -5,7 +5,7 @@
 	<key>CFBundleExecutable</key>
 	<string>MuseBleNative</string>
 	<key>CFBundleIdentifier</key>
-	<string>io.github.openxiaoshan.muse.Native</string>
+	<string>io.github.lyncn02.muse.Native</string>
 	<key>CFBundlePackageType</key>
 	<string>BNDL</string>
 	<key>CFBundleShortVersionString</key>

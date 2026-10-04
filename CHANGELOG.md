@@ -1,6 +1,6 @@
 # Changelog
 
-## 0.1.0-preview.1 — 2026-10-04
+## 0.1.0-preview.2 — 2026-10-04
 
 Initial public preview: independent UPM package, C# Muse transport, in-process macOS/Android pairing, encrypted credentials, optional voice UI, replaceable ASR, reply correlation and isolated protocol/UI tests.
 

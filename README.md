@@ -6,7 +6,7 @@ An independent, open-source Unity package with direct Muse connectivity, Bluetoo
 
 [中文说明](README.zh-CN.md) · [Architecture & API](Documentation~/architecture.md) · [Development](DEVELOPMENT.md) · [Validation status](Documentation~/validation.md)
 
-> **Public preview — `0.1.0-preview.1`.** This is a community integration, not an official Meta or Unity product. The target is Meta's personal Muse agent, not Unity's similarly named AI tooling or the Muse EEG headset.
+> **Public preview — `0.1.0-preview.2`.** This is a community integration, not an official Meta or Unity product. The target is Meta's personal Muse agent, not Unity's similarly named AI tooling or the Muse EEG headset.
 
 ## What is included
 
@@ -21,7 +21,7 @@ An independent, open-source Unity package with direct Muse connectivity, Bluetoo
 Use **Unity 6** (validated with 6000.3.16f1). In **Window → Package Manager → + → Install package from git URL**, enter:
 
 ```text
-https://github.com/openXiaoshan/muse-unity.git#v0.1.0-preview.1
+https://github.com/LYNCN02/muse-unity.git#v0.1.0-preview.2
 ```
 
 Or clone this repository and install its `package.json` using **Install package from disk**. Dependencies are declared in the package: Unity UI/TextMeshPro and Newtonsoft JSON. The managed Bouncy Castle dependency and its license are included.

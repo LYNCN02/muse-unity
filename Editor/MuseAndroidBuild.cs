@@ -10,7 +10,7 @@ public static class MuseAndroidBuild
         string path = Path.Combine(unityLibrary, "proguard-unity.txt");
         string existing = File.Exists(path) ? File.ReadAllText(path) : "";
         if (existing.Contains(Marker)) return;
-        File.AppendAllText(path, "\n" + Marker + "\n-keep class io.github.openxiaoshan.muse.** { *; }\n-keep interface io.github.openxiaoshan.muse.** { *; }\n", new UTF8Encoding(false));
+        File.AppendAllText(path, "\n" + Marker + "\n-keep class io.github.lyncn02.muse.** { *; }\n-keep interface io.github.lyncn02.muse.** { *; }\n", new UTF8Encoding(false));
     }
 }
 

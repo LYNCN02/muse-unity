@@ -15,7 +15,7 @@ flowchart LR
 ## Components
 
 - `MusePairingProtocol`, `MusePairingController`, `MuseBlePairing`: pairing v5 cryptography, bounded state machine, native peripheral lifecycle.
-- `MuseMacPeripheral`: C ABI adapter for CoreBluetooth/Keychain. Android uses JNI with `io.github.openxiaoshan.muse` classes.
+- `MuseMacPeripheral`: C ABI adapter for CoreBluetooth/Keychain. Android uses JNI with `io.github.lyncn02.muse` classes.
 - `MuseDeviceStore`: encrypted platform storage. Unsupported platforms cannot silently claim successful persistence.
 - `MuseAccount`: HTTPS device authentication, VM discovery and refresh. The default VM is selected; there is no VM picker yet.
 - `MuseNoiseConnection`, `MuseWire`: Noise XX, encrypted frames, fragmentation and independent request streams.

@@ -1,4 +1,4 @@
-// Adapted from wong2/muse-client; see NOTICE.txt.
+// Adapted from wong2/muse-client; see NOTICE.
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -63,7 +63,7 @@ namespace Muse.Unity
             using var request = new HttpRequestMessage(body == null ? HttpMethod.Get : HttpMethod.Post, new Uri(root, path));
             request.Headers.TryAddWithoutValidation("Authorization", "Bearer " + token);
             request.Headers.TryAddWithoutValidation("X-API-Version", "1.0.0");
-            request.Headers.TryAddWithoutValidation("User-Agent", "muse-unity/0.1.0-preview.1");
+            request.Headers.TryAddWithoutValidation("User-Agent", "muse-unity/0.1.0-preview.2");
             if (body != null) request.Content = new StringContent(body.ToString(Formatting.None), Encoding.UTF8, "application/json");
             using var response = await http.SendAsync(request, cancellation).ConfigureAwait(false);
             if (!response.IsSuccessStatusCode) throw new MuseException("MUSE_HTTP_FAILED", (int)response.StatusCode);

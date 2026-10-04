@@ -1,4 +1,4 @@
-// Muse Gadget pairing v5 / wong2/muse-client port; see NOTICE.txt.
+// Muse Gadget pairing v5 / wong2/muse-client port; see NOTICE.
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;

@@ -41,7 +41,7 @@ public static class VerifyMuseObject
             File.WriteAllText("Temp/MuseGradleFixture/proguard-unity.txt", "# existing Unity rules\n");
             MuseAndroidBuild.AddKeepRules("Temp/MuseGradleFixture"); MuseAndroidBuild.AddKeepRules("Temp/MuseGradleFixture");
             string rules = File.ReadAllText("Temp/MuseGradleFixture/proguard-unity.txt");
-            Check(rules.StartsWith("# existing Unity rules") && rules.Split(new[] { "# Muse Unity JNI" }, StringSplitOptions.None).Length == 2 && rules.Contains("-keep class io.github.openxiaoshan.muse.**"),
+            Check(rules.StartsWith("# existing Unity rules") && rules.Split(new[] { "# Muse Unity JNI" }, StringSplitOptions.None).Length == 2 && rules.Contains("-keep class io.github.lyncn02.muse.**"),
                 "Android Gradle callback preserves Muse JNI names without duplicating or replacing Unity rules");
             var vector = JObject.Parse(File.ReadAllText("noise-vector.json")); Func<string, byte[]> bytes = key => Hex((string)vector[key]);
             using var noise = new MuseNoiseHandshake(bytes("ephemeral"), bytes("static"));

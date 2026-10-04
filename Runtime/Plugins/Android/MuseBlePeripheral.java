@@ -1,4 +1,4 @@
-package io.github.openxiaoshan.muse;
+package io.github.lyncn02.muse;
 
 import android.app.Activity;
 import android.bluetooth.*;

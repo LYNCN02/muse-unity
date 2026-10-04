@@ -23,7 +23,7 @@ namespace Muse.Unity
             {
                 using var unity = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
                 using var activity = unity.GetStatic<AndroidJavaObject>("currentActivity");
-                using var store = new AndroidJavaClass("io.github.openxiaoshan.muse.MuseCredentialStore");
+                using var store = new AndroidJavaClass("io.github.lyncn02.muse.MuseCredentialStore");
                 var values = new object[args.Length + 1]; values[0] = activity; Array.Copy(args, 0, values, 1, args.Length);
                 return store.CallStatic<T>(method, values);
             }
@@ -35,7 +35,7 @@ namespace Muse.Unity
         public static void Clear()
         {
             using var unity = new AndroidJavaClass("com.unity3d.player.UnityPlayer"); using var activity = unity.GetStatic<AndroidJavaObject>("currentActivity");
-            using var store = new AndroidJavaClass("io.github.openxiaoshan.muse.MuseCredentialStore"); store.CallStatic("clear", activity);
+            using var store = new AndroidJavaClass("io.github.lyncn02.muse.MuseCredentialStore"); store.CallStatic("clear", activity);
         }
 #elif UNITY_EDITOR_OSX || UNITY_STANDALONE_OSX
         public static MuseCredentials Load() => MuseMacPeripheral.Load();

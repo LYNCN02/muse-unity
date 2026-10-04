@@ -2,13 +2,13 @@
 
 把 Meta Muse 接入 Unity 的独立开源包：C# 直连、手机蓝牙绑定、加密凭据存储、流式文字回复，以及可替换 ASR 的语音示例。无需本机桥接进程。
 
-当前是 **0.1.0-preview.1 社区预览版**，不代表 Meta 或 Unity 官方产品。这里的 Muse 是 Meta 的个人智能体，不是 Unity 自带 AI 工具，也不是同名 EEG 头环。
+当前是 **0.1.0-preview.2 社区预览版**，不代表 Meta 或 Unity 官方产品。这里的 Muse 是 Meta 的个人智能体，不是 Unity 自带 AI 工具，也不是同名 EEG 头环。
 
 ## 安装和使用
 
 1. 使用 Unity 6，在 Package Manager 中通过 Git URL 安装：
 
-   `https://github.com/openXiaoshan/muse-unity.git#v0.1.0-preview.1`
+   `https://github.com/LYNCN02/muse-unity.git#v0.1.0-preview.2`
 
 2. 执行 `Tools > Muse Unity > Import TMP Essentials`，导入完成后执行 `Create sample scene` 和 `Open sample scene`，进入 Play Mode。
 3. 点击 `Bind Muse`，填入自己的 Muse SDK Token。默认语音示例另需自己的 ElevenLabs Key，可在界面输入或通过 `ELEVENLABS_API_KEY` 环境变量提供。

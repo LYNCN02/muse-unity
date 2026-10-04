@@ -1,4 +1,4 @@
-// Adapted from wong2/muse-client and Meta Muse Gadget SDK; see NOTICE.txt.
+// Adapted from wong2/muse-client and Meta Muse Gadget SDK; see NOTICE.
 using System;
 using System.Collections.Generic;
 using System.IO;

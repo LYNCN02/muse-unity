@@ -1,17 +1,17 @@
 {
-  "name": "io.github.openxiaoshan.muse-unity",
-  "version": "0.1.0-preview.1",
+  "name": "io.github.lyncn02.muse-unity",
+  "version": "0.1.0-preview.2",
   "displayName": "Muse Unity (Unofficial)",
   "description": "Connect Unity experiences directly to Meta Muse: Bluetooth pairing, secure device credentials, text replies and an optional voice UI.",
   "unity": "6000.0",
   "license": "Apache-2.0",
   "author": {
     "name": "Muse Unity contributors",
-    "url": "https://github.com/openXiaoshan/muse-unity"
+    "url": "https://github.com/LYNCN02/muse-unity"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/openXiaoshan/muse-unity.git"
+    "url": "https://github.com/LYNCN02/muse-unity.git"
   },
   "keywords": [
     "muse",
