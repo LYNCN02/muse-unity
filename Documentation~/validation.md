@@ -1,16 +1,18 @@
 # Validation status
 
-Publication date: 2026-10-04. Initial public preview, published before standalone acceptance is complete.
+Publication date: 2026-10-04. Public preview. Isolated standalone checks passed after publication; live-device acceptance remains incomplete.
 
 ## Passed for the extracted package
 
 - macOS native source rebuilt as an arm64/x86_64 universal plugin; expected C ABI symbols verified.
 - Android Java source compiled against an Android SDK; expected JNI methods verified.
 - Selected-file extraction, explicit credential configuration, separate namespace/store identifiers, and pre-publication credential/private-dependency scan.
+- Fresh Unity 6000.3.16f1 project: UPM installation, package compilation, TMP resource import, and the complete isolated C#/protocol/UI suite passed. See [test report](isolated-test-report.txt).
+- Follow-up fixes: corrected managed crypto plugin importer metadata and guarded missing TMP settings during first import.
+- Full Git-history and working-tree scan, including native binaries, found no credential-shaped literals or matches against private source-project credentials.
 
 ## Pending for the extracted package
 
-- Fresh-project UPM installation succeeded. The first compile exposed a managed crypto plugin import issue; its importer metadata was corrected, and compilation plus isolated C#/protocol/UI tests await a rerun.
 - New account binding and credential restoration using the package's independent store.
 - Complete live speech → Muse → visible Unity reply acceptance.
 - Android device / IL2CPP / APK, macOS standalone, and multilingual font coverage.

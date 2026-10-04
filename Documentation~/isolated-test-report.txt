@@ -1,0 +1,120 @@
+PASS BLE v5 P-256/HKDF matches official community_app vector: device_pub
+PASS BLE v5 P-256/HKDF matches official community_app vector: device_nonce
+PASS BLE v5 P-256/HKDF matches official community_app vector: transcript_hash
+PASS BLE v5 P-256/HKDF matches official community_app vector: session_id
+PASS BLE outbound AES-GCM nonce/AAD matches independent Python mobile vector
+PASS BLE replay poisons pairing keys
+PASS BLE failed session cannot continue
+PASS BLE tampered authorization rejected
+PASS BLE only first encrypted client-finished confirms consent
+PASS BLE authorization handshake expires
+PASS BLE notifications fit default 20-byte payload
+PASS BLE missing/out-of-order fragment rejected
+PASS BLE receives Android-sized 512-byte fragments for a credential-length message
+PASS BLE credentials retain stable device identity and SDK token
+PASS BLE device authorization verified before encrypted storage commit
+PASS BLE phone authorization/provisioning flow returns encrypted auth_ok
+PASS BLE uses current internet connection without changing Wi-Fi
+PASS BLE cancellation prevents late authorization commit
+PASS BLE replacement hello cancels pending verification and cannot commit old tokens
+PASS BLE rejected Muse authorization never reports binding success
+PASS BLE encrypted storage failure never reports binding success
+PASS BLE plaintext credentials are never accepted
+PASS tokenless discovery provides phone with public device metadata
+PASS tokenless discovery stops before authorization and never verifies or saves credentials
+PASS Android Gradle callback preserves Muse JNI names without duplicating or replacing Unity rules
+PASS Unity X25519 message 1 matches independent Python vector
+PASS Unity Noise XX message 3 matches independent Python vector
+PASS Unity AES-GCM outbound key and BIG-endian nonce match reference
+PASS Unity inbound ciphertext matches independent Python vector
+PASS handshake state rejects reuse
+PASS replayed ciphertext is rejected
+PASS failed cipher remains poisoned
+PASS tampered XX handshake rejected
+PASS protobuf response matches Python envelope
+PASS out-of-order Noise chunks wait for full assembly
+PASS uint64 frame IDs and 180 KB messages reassemble
+PASS duplicate fragments rejected
+PASS failed assembler stays poisoned
+PASS malformed protobuf varint rejected
+PASS truncated protobuf field rejected
+PASS field zero rejected
+PASS production transport rejects plaintext WebSocket
+PASS split UTF-8 and acknowledgement buffered without emitting a partial event
+PASS Chinese/emoji NDJSON survives arbitrary network split
+PASS replayed event seq is deduplicated
+PASS truncated UTF-8 rejected
+PASS send acknowledgement preserves canonical parent used by SDK reply matching
+PASS SDK event-name, parent ID and final text aliases retain a related reply
+PASS alternate parent support still rejects unrelated replies with safe decision codes
+PASS main conversation subscription does not display uncorrelated App activity
+PASS related message-start links subsequent deltas without parent fields
+PASS other session's text never displayed
+PASS explicit mismatched reply-to excluded
+PASS live partial reply does not claim message completion
+PASS final text replaces partial reply without duplication
+PASS independent recorder encodes valid mono PCM WAV and downmixes stereo
+PASS ASR goes directly to existing ElevenLabs provider
+PASS ASR multipart sends WAV with automatic language detection
+PASS only trimmed ASR transcript is returned for Muse sending
+PASS empty ASR transcript rejected before Muse send
+PASS original pairing.json plus identity.json imports expected device ID
+PASS secure configuration serialization restores ASR key alongside Muse binding
+PASS explicit ASR override takes priority and blank input reuses saved configuration
+PASS refresh strips upstream token prefix
+PASS local ASR key is excluded from Muse refresh request
+PASS 401 refresh retries VM lookup once and returns rotated credentials
+PASS Muse token refresh preserves local ASR configuration
+PASS real Unity ClientWebSocket multiplexes 8 streams against original Python Noise responder
+PASS live cross-language transport handles out-of-order encrypted 180 KB response
+PASS headers cancellation sends reset and releases pending request
+PASS body cancellation wakes pending reader
+PASS upstream stream reset is reported
+PASS connection remains usable after stream cancellation/reset
+PASS WebSocket disconnect fails outstanding request
+PASS WebSocket disconnect releases other live body readers
+PASS optional standalone Prefab and test scene created by Unity API
+PASS test scene is not installed in build startup
+PASS loading object does not log in, open microphone or send messages
+PASS loading optional component never automatically opens Bluetooth pairing
+PASS independent button has raycaster and exactly one EventSystem
+PASS standalone record/send touch target has nonzero size
+PASS reply scroll view has viewport and content
+PASS Bind Muse button opens personal SDK token form and phone pairing steps
+PASS saving optional object configuration includes usable ASR key
+PASS opening microphone disables send and distinguishes startup from actual recording
+PASS recording coroutine survives permission yields and finishes startup instead of cancelling itself
+PASS Stop during microphone startup prevents delayed microphone acquisition and sends nothing
+PASS recording time limit retains audio with separate Send enabled and never automatically transcribes or sends
+PASS repeated Record activation cannot stop or send pending audio
+PASS manual Send reads the retained full recording
+PASS only explicit Send triggers ASR once and empty transcript never reaches Muse
+PASS visible text has font/shader/mesh: Title
+PASS visible text has font/shader/mesh: Subtitle
+PASS visible text has font/shader/mesh: Status
+PASS visible text has font/shader/mesh: Transcript
+PASS visible text has font/shader/mesh: Reply
+PASS visible text has font/shader/mesh: Label
+PASS visible text has font/shader/mesh: Label
+PASS visible text has font/shader/mesh: Label
+PASS visible text has font/shader/mesh: Label
+PASS visible text has font/shader/mesh: Label
+PASS reply subscription uses existing main conversation
+PASS reply subscription is ready before submitting recognized text
+PASS new voice messages use existing main conversation without subscribing to an uncreated side chat
+PASS events before the message acknowledgement remain buffered
+PASS early live reply is retained across acknowledgement ordering
+PASS independent button sends ASR result once through Muse interface
+PASS network callback is marshalled onto Unity Update for partial reply
+PASS message ready enables next voice input without claiming agent-turn completion
+PASS cancel rejects late network callbacks
+PASS ASR failure does not send fallback or raw audio to Muse
+PASS disabling optional object closes Muse session
+PASS invalid SDK token does not open BLE advertising
+PASS Scan test button advertises without a personal SDK token
+PASS phone discovery ends with explicit SDK requirement and no credentials committed
+PASS binding locks voice input, clears previous conversation and shows discoverable MuseGadget name
+PASS BLE binding saves verified credentials, requests auth_ok delivery, closes fixture peripheral and connects without sending speech
+PASS BLE diagnostics include protocol phases and packet lengths without SDK or device tokens
+PASS Stop during Bluetooth authorization closes peripheral and discards late credentials
+BOUNDARY: Python peer, BLE peripheral and UI services are isolated fixtures. No real Muse account, ASR service, radio, phone App or Android Keystore was exercised.

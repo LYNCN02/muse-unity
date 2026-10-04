@@ -17,7 +17,7 @@ public static class MuseObjectTools
     public static void CreateAssets()
     {
         if (Application.isPlaying) throw new InvalidOperationException("Exit Play Mode before creating the sample.");
-        if (TMP_Settings.defaultFontAsset == null) throw new InvalidOperationException("First use Tools > Muse Unity > Import TMP Essentials, then create the sample.");
+        if (TMP_Settings.instance == null || TMP_Settings.defaultFontAsset == null) throw new InvalidOperationException("First use Tools > Muse Unity > Import TMP Essentials, then create the sample.");
         Directory.CreateDirectory("Assets/MuseUnitySample"); AssetDatabase.Refresh();
         var preview = EditorSceneManager.NewPreviewScene();
         var root = new GameObject("MuseObject"); SceneManager.MoveGameObjectToScene(root, preview);
@@ -47,13 +47,13 @@ public static class MuseObjectTools
     // CI preparation imports Unity-owned resources into the disposable host project, never this package.
     public static void PrepareTests()
     {
-        if (TMP_Settings.defaultFontAsset != null) { EditorApplication.Exit(0); return; }
+        if (TMP_Settings.instance != null && TMP_Settings.defaultFontAsset != null) { EditorApplication.Exit(0); return; }
         ImportEssentials();
         double deadline = EditorApplication.timeSinceStartup + 120;
         EditorApplication.update += WaitForFont;
         void WaitForFont() {
             if (EditorApplication.isCompiling || EditorApplication.isUpdating) return;
-            if (TMP_Settings.defaultFontAsset != null) { EditorApplication.update -= WaitForFont; EditorApplication.Exit(0); }
+            if (TMP_Settings.instance != null && TMP_Settings.defaultFontAsset != null) { EditorApplication.update -= WaitForFont; EditorApplication.Exit(0); }
             else if (EditorApplication.timeSinceStartup > deadline) { EditorApplication.update -= WaitForFont; EditorApplication.Exit(1); }
         }
     }

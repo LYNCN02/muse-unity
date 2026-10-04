@@ -1,6 +1,6 @@
 {
   "name": "io.github.lyncn02.muse-unity",
-  "version": "0.1.0-preview.2",
+  "version": "0.1.0-preview.3",
   "displayName": "Muse Unity (Unofficial)",
   "description": "Connect Unity experiences directly to Meta Muse: Bluetooth pairing, secure device credentials, text replies and an optional voice UI.",
   "unity": "6000.0",
