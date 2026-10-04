@@ -11,7 +11,9 @@ for p in root.rglob('*'):
     try: s=p.read_text()
     except UnicodeDecodeError: continue
     if p.name == 'audit.py': continue
-    if re.search(r'(?i)lynook|lumomobile|MinimalVoiceChat|QwenTTS|MiSans|/Users/',s): errors.append(relative+': private host reference')
+    # Public brand attribution is allowed only in the two project READMEs.
+    if re.search(r'(?i)lumomobile|MinimalVoiceChat|QwenTTS|MiSans|/Users/',s): errors.append(relative+': private host reference')
+    if relative not in {'README.md', 'README.zh-CN.md'} and re.search(r'(?i)lynook',s): errors.append(relative+': private host reference')
     if re.search(r'(?:sk_[A-Za-z0-9]{20,}|gh[pousr]_[A-Za-z0-9]{20,}|github_pat_[A-Za-z0-9_]{20,})',s): errors.append(relative+': possible credential')
     for token in re.findall(r'mgst_[A-Za-z0-9_-]{20,}',s):
         if set(token[5:]) != {'A'}: errors.append(relative+': unexpected SDK token')

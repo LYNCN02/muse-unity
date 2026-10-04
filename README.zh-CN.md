@@ -4,6 +4,16 @@
 
 当前是 **0.1.0-preview.3 社区预览版**，不代表 Meta 或 Unity 官方产品。这里的 Muse 是 Meta 的个人智能体，不是 Unity 自带 AI 工具，也不是同名 EEG 头环。
 
+## 关于 LYNOOK
+
+[LYNOOK 官网](https://www.lynook.com/) · [公司 GitHub](https://github.com/LYNCN02)
+
+LYNOOK 致力于让数字角色在你的桌面上拥有一个家。Project L 将双屏 3D 世界、可自定义角色与日常 AI 陪伴结合，探索数字角色融入现实生活的方式。
+
+**Muse Unity 是完整开源的独立项目。** 本仓库公开接入代码、原生插件源码、示例生成器与测试工具，采用 [Apache-2.0](LICENSE)，同时保留上游和依赖的许可证。任何人都可以按许可证使用、学习、修改和再分发，包括商业使用。本接入项目没有闭源版本，也不要求购买 LYNOOK 硬件。
+
+这里的开源范围是接入代码；Muse 与可选 ASR 服务仍有各自的访问条件和费用，使用者需自行提供凭据。
+
 ## 安装和使用
 
 1. 使用 Unity 6，在 Package Manager 中通过 Git URL 安装：

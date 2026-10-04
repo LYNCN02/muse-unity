@@ -8,6 +8,14 @@ An independent, open-source Unity package with direct Muse connectivity, Bluetoo
 
 > **Public preview — `0.1.0-preview.3`.** This is a community integration, not an official Meta or Unity product. The target is Meta's personal Muse agent, not Unity's similarly named AI tooling or the Muse EEG headset.
 
+## About LYNOOK
+
+[LYNOOK](https://www.lynook.com/) builds AI companion hardware that gives digital characters a home on your desk. Its Project L combines a dual-screen 3D world, customizable characters, and everyday companionship.
+
+Muse Unity is a fully open-source project published by [LYNCN02](https://github.com/LYNCN02). The integration source, native plugins, sample generator, and test tools are available in this repository under [Apache-2.0](LICENSE), with upstream and dependency licenses retained. You can use, study, modify, and redistribute the code, including commercially, under those terms. There is no closed-source edition of this integration or requirement to own LYNOOK hardware.
+
+Open source describes this integration's code; Muse and optional ASR services retain their own access terms and pricing. Bring your own credentials.
+
 ## What is included
 
 - C# HTTPS authentication, token refresh, Noise XX encryption and multiplexed WebSocket transport.
