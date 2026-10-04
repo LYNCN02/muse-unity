@@ -16,6 +16,12 @@ Muse Unity is a fully open-source project published by [LYNCN02](https://github.
 
 Open source describes this integration's code; Muse and optional ASR services retain their own access terms and pricing. Bring your own credentials.
 
+## About the creator
+
+[Jammie](https://someonewaits.com/) is building LYNOOK, bringing 3D character software and AI interaction together in physical devices. His work explores how AI characters can share everyday spaces with people, with a focus on character identity, memory, behavior, and a sense of presence beyond conversation.
+
+On [Jammie's Digital Garden](https://someonewaits.com/), he shares notes on physical AI, character systems, and the process of building LYNOOK. Muse Unity brings part of that exploration to the community as a fully open-source Unity integration.
+
 ## What is included
 
 - C# HTTPS authentication, token refresh, Noise XX encryption and multiplexed WebSocket transport.

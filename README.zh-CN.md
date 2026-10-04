@@ -14,6 +14,12 @@ LYNOOK 致力于让数字角色在你的桌面上拥有一个家。Project L 将
 
 这里的开源范围是接入代码；Muse 与可选 ASR 服务仍有各自的访问条件和费用，使用者需自行提供凭据。
 
+## 关于作者
+
+[Jammie](https://someonewaits.com/) 正在打造 LYNOOK，将 3D 角色软件与 AI 交互带进实体设备，探索 AI 角色如何与人共享日常空间。他关注角色的身份、记忆、行为，以及对话之外持续存在的陪伴感。
+
+个人网站 [Jammie's Digital Garden — someonewaits.com](https://someonewaits.com/) 记录了实体 AI、角色系统和 LYNOOK 的开发过程。Muse Unity 将其中一部分探索整理为完整开源的 Unity 接入项目，与社区共同分享和完善。
+
 ## 安装和使用
 
 1. 使用 Unity 6，在 Package Manager 中通过 Git URL 安装：
